@@ -1,0 +1,19 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "Nodejs With Npm",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShahArif/NodeJs.git"
+  },
+  "author": "Arif Shah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShahArif/NodeJs/issues"
+  },
+  "homepage": "https://github.com/ShahArif/NodeJs#readme"
+}
