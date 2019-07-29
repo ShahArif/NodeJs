@@ -11,8 +11,6 @@ http.createServer((req , resp) => {    // ES 6 Syntax
     resp.write('Hello Brother , How are You');
     resp.end();
 }).listen(3000);
-    
-
     // Synchronus Method
     // const data = fs.readFile(__dirname +"/data.txt","utf8",(err, data) =>{
     //     console.log(data);
@@ -26,8 +24,5 @@ http.createServer((req , resp) => {    // ES 6 Syntax
      } catch(e){
         console.log(e);
      }
-    
-
-
 
 console.log("File Ended Successfully Here !!!");
