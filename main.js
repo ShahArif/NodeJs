@@ -1,6 +1,32 @@
 var http = require('http');
 var fs = require('fs');
-var path = require('path');
+
+
+const events = require('events');
+const  event = new events.EventEmitter();
+
+//  Approach 1
+// event.on('something',(param1, param2)=>{
+//     console.log('First Event called with '+ param1 + " Second arg as number is " + param2);
+// });
+
+// event.emit('something','This message is passed as parameter',25);
+
+
+// Approach 2
+const first_event = function(n1 , n2){
+    console.log('First Event ' , n1+n2);
+    event.emit('multiply',2,5);
+}
+
+const second_event = function(n1 , n2){
+    console.log('Second Event' + n1*n2);
+    
+}
+
+event.on('add',first_event);
+event.on('multiply',second_event);
+event.emit('add',2,5);
 
 
 
@@ -11,23 +37,3 @@ http.createServer((req , resp) => {    // ES 6 Syntax
     resp.write('Hello Brother , How are You');
     resp.end();
 }).listen(3000);
-    
-
-    // Synchronus Method
-    // const data = fs.readFile(__dirname +"/data.txt","utf8",(err, data) =>{
-    //     console.log(data);
-    // });
-
-    // Async Method
-     try {
-        const data = fs.readFileSync(__dirname+"/data.txt","utf8",(err, data) =>{
-            console.log('Here comes' + data);
-        });
-     } catch(e){
-        console.log(e);
-     }
-    
-
-
-
-console.log("File Ended Successfully Here !!!");
