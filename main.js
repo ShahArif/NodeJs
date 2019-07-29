@@ -1,28 +1,12 @@
-console.log("Hello World");
+// Creating Web Server
+// To use the nodemon we have to install nodemon package 
+// npm install -g nodemon
 
-var student = {
-   name:'arif Shah',
-   email: 'arif@gmail.com',
-   designation :'Senior Software Engineer',
-   company : 'Ideas2IT Technologies Pvt Ltd'
-};
-
-
-var getName = function(a , b){
-   console.log("Hey");
-   console.log("You have passed " + a + "and " + b );
-   var c = a + b ;
-   console.log("Sum of the given numbers is : " + c);
-}
-
-getName(5 , 6);
-
-// Arrrow Functions
-var getName1 = (a , b)=>{
-    console.log("Hey");
-    console.log("You have passed " + a + "and " + b );
-    var c = a + b ;
-    console.log("Sum of the given numbers is : " + c);
- }
- 
- getName1(5 , 6);
+var http = require('http');
+http.createServer((req , resp) => {    // ES 6 Syntax
+    resp.writeHead(200,{'content-type':'text/html'});
+    resp.write('Request came from Url' + req.url + '<br />');
+    resp.write('Hello Brother , How are You');
+    resp.write('<br> Hey Node Mon is working dude');
+    resp.end();
+}).listen(3000);
