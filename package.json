@@ -1,7 +1,7 @@
 {
   "name": "nodejs",
   "version": "1.0.0",
-  "description": "Nodejs With Npm",
+  "description": "a little todo app",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/ShahArif/NodeJs.git"
   },
-  "author": "Arif Shah",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ShahArif/NodeJs/issues"
