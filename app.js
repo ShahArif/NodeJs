@@ -8,7 +8,7 @@ var todoController = require('./controllers/todoController');
 app.set('view engine', 'ejs');
 
 // static Files
-app.use('/assets',express.static('./public'));
+app.use(express.static(__dirname + '/public'));
 
 // Fire controller
 todoController(app);
